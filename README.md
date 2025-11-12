@@ -1,3 +1,5 @@
+これは私のオリジナル作品ではありません
+
 # AdBlock Filter Compiler
 
 This repository contains a Python script designed to compile and optimize various blocklists, host files, and domain lists into a single, efficient AdBlock filter list. The script ensures that the resulting list is free of duplicates and redundant rules, providing a streamlined and effective ad-blocking experience.
