@@ -5,10 +5,9 @@ from datetime import datetime, timezone
 import json
 import logging
 
-# Enhanced regex for efficiency (more strict IP pattern, reduced backtracking)
+# Updated regex to only match domains, not IP addresses
 domain_regex = re.compile(
-    r"^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)"  # IP check
-    r"|(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"  # Domain
+    r"(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)+[a-z0-9][a-z0-9-]{0,61}[a-z0-9]$"  # Domain only
 )
 
 def is_valid_domain(domain):
@@ -29,6 +28,8 @@ def generate_filter(file_contents):
     for content in file_contents:
         for rule in parse_hosts_file(content):
             domain = rule[2:-1]
+            if not is_valid_domain(domain):
+                continue  # Skip IP addresses, only process valid domains
             base_domain = '.'.join(domain.rsplit('.', 2)[-2:])  # Efficient base domain extraction
             if rule not in adblock_rules and base_domain not in base_domains:
                 adblock_rules.add(rule)
