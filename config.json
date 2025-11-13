@@ -8,6 +8,7 @@
     "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt",
     "https://raw.githubusercontent.com/jackszb/comads/main/comads.txt",
     "https://raw.githubusercontent.com/jackszb/noai/main/noai_hosts.txt",
-    "https://raw.githubusercontent.com/jackszb/Full_DNS_Block/main/Full_DNS_Block.txt"
+    "https://raw.githubusercontent.com/jackszb/Full_DNS_Block/main/Full_DNS_Block.txt",
+    "https://raw.githubusercontent.com/mullvad/dns-blocklists/main/files/social"
   ]
 }
