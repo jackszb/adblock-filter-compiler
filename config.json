@@ -6,8 +6,6 @@
     "https://raw.githubusercontent.com/ppfeufer/adguard-filter-list/master/blocklist",
     "https://raw.githubusercontent.com/jackszb/MyAdList/main/dnsblock.txt",
     "https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt",
-    "https://raw.githubusercontent.com/jackszb/comads/main/comads.txt",
-    "https://raw.githubusercontent.com/jackszb/noai/main/noai_hosts.txt",
-    "https://raw.githubusercontent.com/jackszb/Full_DNS_Block/main/Full_DNS_Block.txt"
+    "https://raw.githubusercontent.com/jackszb/comads/main/comads.txt"
   ]
 }
